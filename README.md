@@ -1,8 +1,10 @@
 # Customer Form App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0. Due to time constraints, it retains a number of legacy files and dependencies that could be purged.
+This Angular 2 project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0. Due to time constraints, it retains a number of legacy files and dependencies that could be purged.
 
-This project is minimally styled, but I _am_ a style guru! Please see
+This project is minimally styled, but I _am_ a style guru! For samples of my front end work, please see:
+ - http://www.hackreactor.com/
+ - https://admissions.hackreactor.com/steps/1
 
 ## Development server
 
