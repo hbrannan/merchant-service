@@ -19,14 +19,29 @@
   </div> <!-- .col -->
 
   <div class="col">
-    <button class="merchant-form__button merchant-form__button--claim-order" (click)="claimOrder(selectedOrder)">Claim Order</button>
+    <div class="col__flex-group">
+      <form #merchantForm="ngForm">
+        <input class="form-control" type="text" name="merchantName"
+          id="merchantName" placeholder="merchantName"
+          [(ngModel)]="model.merchantName"
+          #merchantName="ngModel"
+        required>
+        <div [hidden]="merchantName.valid || merchantName.pristine"
+          class="alert alert-danger">
+          Merchant Name is Required
+        </div>
+
+        <button class="merchant-form__button merchant-form__button--claim-order" (click)="claimOrder(selectedOrder)">Claim Order</button>
+        <div class="response-container">{{orderClaimedResponse}}</div>
+      </form>
+    </div> <!-- .col__flex-group -->
   </div> <!-- .col -->
 
   <div class="col">
     <div class="col__flex-group">
       <form>
-        <input type="text" name="merchantName" placeholder="merchantName">
         <button class="merchant-form__button merchant-form__button--process-order" (click)="processOrder(selectedOrder)">Process The Selected Order</button>
+        <div class="response-container">{{orderProcessedResponse}}</div>
       </form>
     </div> <!-- .col__flex-group -->
   </div> <!-- .col -->

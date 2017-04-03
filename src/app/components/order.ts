@@ -1,5 +1,4 @@
 export class Order {
- _id: string;
   constructor (
     public _id: string,
     public quantity: number,

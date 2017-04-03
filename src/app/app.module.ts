@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 import { MerchantFormComponent } from './components/merchant-form.component'
 
 import { AppComponent } from './app.component';
-import { MerchantService } from './merchant.service';
+import { MerchantService } from './data-services/merchant.service';
 
 @NgModule({
   declarations: [

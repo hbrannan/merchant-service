@@ -1,28 +1,51 @@
-# NgApp
+# Customer Form App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0. Due to time constraints, it retains a number of legacy files and dependencies that could be purged.
+
+This project is minimally styled, but I _am_ a style guru! Please see
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server at `http://localhost:4200/`. The app utilized live reload if for any source files.
 
-## Code scaffolding
+## App Layout
+- App -- layout, module imports, declarations, providers and bootstrapping
+- Components -- Merchant Form
+- Merchant-Service -- HTTP, mock data
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+## Web Service API
+https://sample-order-service.herokuapp.com/orders-data/
 
-## Build
+##TODOs
+- Increase specificity & robustness of tests
+- Pull from shippingOptions, dimensions, materials at load (eventually over server)
+- Pull from subsets shippingOptions, dimensions, materials as move through selections
+- Calculate shipping costs, shipping costs (do this client side) as user orders
+- Use precompiler for styles. Set styles-global folder with styles vars & utils. Break remaining styles into importable components.
+- Standardize BEM classing conventions (allows porting into multiple contexts seamlessly)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+- -->(Moving towards websockets): check for status updates (on DB) on load. Setup webhooks that can be called when a step is completed while user is logged on.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Unit tests setup
 
-## Running end-to-end tests
+AppComponent test written. Else, TODO. Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+## End-to-end test setup
 
-## Further help
+TODO. Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Must be serving the app via `ng serve`.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Bitmap test setup
+
+TODO Run `ng ` to execute bitmap & regression tests via [Backstop](https://github.com/garris/BackstopJS).
+Must be serving the app via `ng serve`.(.js)
+
+## Compatibility Testing
+
+TODO -- Initially: manually test via [Browserstack](https://www.browserstack.com/)
+Possibly upgrade to automation testing, e.g., via [Cucumber](https://github.com/cucumber/cucumber-js)
+
+## CI
+
+TODO: Run tests w/ Travis || Circle CI
