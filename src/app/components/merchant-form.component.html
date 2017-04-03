@@ -1,0 +1,33 @@
+<div class="merchant-form grid grid--3">
+  <div class="col">
+    <div class="col__flex-group">
+      <button class="merchant-form__button merchant-form__button--list-orders" (click)="getListOrders()">See Available Orders</button>
+      <ul class="order-list">
+        <li class="order-list__item"
+          [class.selected]="order === selectedOrder"
+          (click)="onSelect(order)"
+         *ngFor="let order of orders">
+          <div>Name: {{order.name}}</div>
+          <div>Address: {{order.address}}</div>
+          <div>Quantity: {{order.quantity}}</div>
+          <div>Shipping Service: {{order.shipping_service}}</div>
+          <div>Prepaid Shipping: {{order.shipping_price}}</div>
+          <div>-id: {{order._id}}</div>
+        </li>
+      </ul>
+    </div> <!-- .col__flex-group -->
+  </div> <!-- .col -->
+
+  <div class="col">
+    <button class="merchant-form__button merchant-form__button--claim-order" (click)="claimOrder(selectedOrder)">Claim Order</button>
+  </div> <!-- .col -->
+
+  <div class="col">
+    <div class="col__flex-group">
+      <form>
+        <input type="text" name="merchantName" placeholder="merchantName">
+        <button class="merchant-form__button merchant-form__button--process-order" (click)="processOrder(selectedOrder)">Process The Selected Order</button>
+      </form>
+    </div> <!-- .col__flex-group -->
+  </div> <!-- .col -->
+</div> <!-- merchant-form -->
